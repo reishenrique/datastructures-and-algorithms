@@ -1,5 +1,5 @@
 class Stack {
-  items: number[];
+  items: (number | string)[];
   constructor() {
     this.items = [];
   }
