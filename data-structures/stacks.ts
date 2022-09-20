@@ -1,10 +1,10 @@
 class Stack {
-  items: any[];
+  items: number[];
   constructor() {
     this.items = [];
   }
 
-  push(element: any) {
+  push(element: number) {
     this.items.push(element);
   }
 
