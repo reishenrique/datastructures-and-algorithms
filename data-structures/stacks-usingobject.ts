@@ -1,6 +1,6 @@
 class StackObject {
-  items: {};
-  count: number;
+  private items: {};
+  private count: number;
   constructor() {
     this.items = {};
     this.count = 0;
@@ -51,7 +51,6 @@ class StackObject {
 
   toString() {
     if (this.isEmpty()) {
-      // If the stack is empty, an empty string will be delivered
       return "";
     }
 
