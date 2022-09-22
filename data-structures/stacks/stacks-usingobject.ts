@@ -6,7 +6,7 @@ class StackObject {
     this.count = 0;
   }
 
-  push(element) {
+  push(element: number | string) {
     this.items[this.count] = element;
     this.count++;
   }
@@ -16,7 +16,7 @@ class StackObject {
   }
 
   isEmpty() {
-    return `Essa pilha tem ${this.count === 0} itens`;
+    return this.count === 0;
   }
 
   pop() {
