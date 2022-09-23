@@ -33,10 +33,6 @@ class StackBinaryToDemical {
   }
 
   peek() {
-    if (this.isEmpty()) {
-      return undefined;
-    }
-
     return this.items[this.count - 1];
   }
 
