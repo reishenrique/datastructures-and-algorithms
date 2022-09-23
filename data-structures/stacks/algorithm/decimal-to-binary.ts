@@ -1,6 +1,6 @@
 // Converting decimal number to binary using stack structure
 
-class StackBinaryToDemical {
+class StackBinaryToDecimal {
   private items: {};
   private count: number;
   constructor() {
@@ -62,7 +62,7 @@ class StackBinaryToDemical {
 }
 
 function decimalToBinary(decNumber: number) {
-  const remStack = new StackBinaryToDemical();
+  const remStack = new StackBinaryToDecimal();
   let number = decNumber;
   let rem: number;
   let binaryString: string = "";
