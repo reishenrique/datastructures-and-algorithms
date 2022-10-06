@@ -61,3 +61,18 @@ class Queue {
     return objString;
   }
 }
+
+const queue = new Queue();
+console.log(queue.isEmpty()); // true
+
+queue.enqueue("Henrique");
+queue.enqueue("Renato");
+console.log(queue.toString()); // Henrique, Renato
+queue.enqueue("Clara");
+
+console.log(queue.toString()); // Henrique, Renato, Camila
+console.log(queue.size()); // 3
+console.log(queue.isEmpty()); // false
+
+queue.dequeue(); // remove Henrique
+queue.dequeue(); // remove Renato
