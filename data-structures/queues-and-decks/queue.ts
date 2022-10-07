@@ -1,7 +1,7 @@
 // Queue (Fila)
 
 class Queue {
-  itens: any[];
+  itens: (number | string)[];
   constructor() {
     this.itens = [];
   }
@@ -37,18 +37,3 @@ class Queue {
     this.itens = [];
   }
 }
-
-const queue = new Queue();
-console.log(queue.isEmpty());
-
-queue.enqueue("Henrique");
-queue.enqueue("Renato");
-queue.enqueue("Clara");
-
-console.log(queue.peek());
-console.log(queue.size());
-console.log(queue.last());
-console.log(queue.isEmpty());
-
-//ueue.dequeue();
-//queue.dequeue();
