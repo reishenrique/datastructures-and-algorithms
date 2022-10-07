@@ -1,78 +1,54 @@
 // Queue (Fila)
 
 class Queue {
-  count: number;
-  lowestCount: number;
-  items: {};
+  itens: any[];
   constructor() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
+    this.itens = [];
   }
 
-  enqueue(element: number | string) {
-    this.items[this.count] = element;
-    this.count++;
+  enqueue(item: number | string) {
+    this.itens.push(item);
   }
 
   dequeue() {
     if (this.isEmpty()) {
       return undefined;
     }
-
-    const result = this.items[this.lowestCount];
-    delete this.items[this.lowestCount];
-    this.lowestCount++;
-    return result;
+    return this.itens.shift();
   }
 
   peek() {
-    if (this.isEmpty()) {
-      return undefined;
-    }
-
-    return this.items[this.lowestCount];
+    return this.itens[0];
   }
 
   isEmpty() {
-    return this.size() === 0;
+    return this.itens.length == 0;
   }
 
   size() {
-    return this.count - this.lowestCount;
+    return this.itens.length;
+  }
+
+  last() {
+    return this.itens[this.itens.length - 1];
   }
 
   clear() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
-  }
-
-  toString() {
-    if (this.isEmpty()) {
-      return "";
-    }
-
-    let objString = `${this.items[this.lowestCount]}`;
-    for (let i = this.lowestCount + 1; i < this.count; i++) {
-      objString = `${objString}, ${this.items[i]}`;
-    }
-
-    return objString;
+    this.itens = [];
   }
 }
 
 const queue = new Queue();
-console.log(queue.isEmpty()); // true
+console.log(queue.isEmpty());
 
 queue.enqueue("Henrique");
 queue.enqueue("Renato");
-console.log(queue.toString()); // Henrique, Renato
 queue.enqueue("Clara");
 
-console.log(queue.toString()); // Henrique, Renato, Camila
-console.log(queue.size()); // 3
-console.log(queue.isEmpty()); // false
+console.log(queue.peek());
+console.log(queue.size());
+console.log(queue.last());
+console.log(queue.isEmpty());
 
-queue.dequeue(); // remove Henrique
-queue.dequeue(); // remove Renato
+//ueue.dequeue();
+//queue.dequeue();
