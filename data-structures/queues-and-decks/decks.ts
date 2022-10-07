@@ -1,7 +1,7 @@
 // Deck or double-ended queue (Deque ou fila de duas pontas)
 
 class Deck {
-  itens: any[];
+  itens: (number | string)[];
   constructor() {
     this.itens;
   }
