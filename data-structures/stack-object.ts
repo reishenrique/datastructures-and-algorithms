@@ -10,7 +10,7 @@ elementos, em comparação com um array com menos elementos. Além disso, um arr
 e, para mantê-los assim, seria necessário ter mais espaço na memória também.
 */
 
-class ObjectStack {
+export class ObjectStack {
     private count: number; // Propriedade count como auxilio a manter o controle do tamanho da stack, utilizada como chave para os elementos
     private items: any;
     constructor() {

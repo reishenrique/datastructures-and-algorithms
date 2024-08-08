@@ -8,19 +8,19 @@ o lado oposto é conhecido como base. Os elementos mais novos ficam próximos ao
 
 // Criando uma classe Stack baseada em array
 
-class Stack {
-    items: string[];
+export class Stack {
+    items: number[];
     constructor() {
         this.items = []; // Array utilizado para armazenar os elementos da pilha
     }
 
     // Método push é responsável pela adição de novos elementos no topo da pilha
-    push(element: string) {
+    push(element: number) {
         this.items.push(element)
     }
 
     // Método pop é responsável pela remoção do último item adicionado à pilha
-    pop() {
+    pop(): any {
         return this.items.pop()
     }
 
@@ -51,16 +51,16 @@ const stack = new Stack()
 
 console.log(stack.isEmpty()) // True (a pilha está realmente vazia)
 
-stack.push('primeiro elemento') // Adiciona 'primeiro elemento' a pilha
-stack.push('segundo elemento') // Adiciona 'segundo elemento' a pilha
+stack.push(1) // Adiciona 'primeiro elemento' a pilha
+stack.push(2) // Adiciona 'segundo elemento' a pilha
 
 console.log(stack.peek()) // Retorna 'segundo elemento' ( Elemento que está no topo da pilha)
 
-stack.push('terceiro elemento') // Adiciona 'terceiro elemento' a pilha
+stack.push(3) // Adiciona 'terceiro elemento' a pilha
 
 console.log(stack.size()) // Retorna '3' (Contém 3 elementos na pilha)
 
-stack.push('quarto elemento') // Adiciona 'quarto elemento' a pilha
+stack.push(4) // Adiciona 'quarto elemento' a pilha
 
 console.log(stack.isEmpty()) // Retorna 'false' (A pilha contem 3 items)
 
